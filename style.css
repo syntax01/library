@@ -1,0 +1,71 @@
+:root {
+    --color-dark: #94a3b8;
+    --color-light: #e2e8f0;
+    --color-white: #f1f5f9
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-light);
+
+}
+
+.container {
+    height: 95vh;
+    margin: 20px;
+    padding: 0px 15px;
+    background-color: var(--color-white);
+    border: solid var(--color-dark) 2px;
+    border-radius: 10px;
+    display: grid;
+    align-content: start;
+}
+
+.header {
+    max-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid var(--color-dark) 2px;
+}
+
+.header > button {
+    padding: 10px;
+}
+
+.library {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 20px;
+    overflow: auto
+}
+
+.book {
+    background-color: var(--color-light);
+    border: solid var(--color-dark) 2px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.book * {
+    margin: 5px 0px;
+}
+
+.book-info {
+    border-bottom: solid var(--color-dark) 2px;
+}
+
+.book-buttons {
+    display: flex;
+    justify-content: space-between
+}
+
+.pages {
+    font-size: 12px;
+    display: flex;
+    justify-content: end;
+}
