@@ -69,3 +69,38 @@ body {
     display: flex;
     justify-content: end;
 }
+
+#modal-add-book {
+    border-radius: 5px;
+}
+
+#modal-add-book-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-input > label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.modal-input > input {
+    margin-top: 2px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    height: 20px;
+    font-size: 16px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+

@@ -11,32 +11,26 @@
     <div class="container">
         <div class="header">
             <h1>Library</h1>
-            <button>Add Book</button>
+            <button id="button-add-book">Add Book</button>
         </div>
         <div class="library">
-            <div class="book">
-                <div class="book-info">
-                    <h1 class="title">Intelligent Design</h1>
-                    <p class="author">by William Dembski</p>
-                    <p class="pages">Pages: 312</p>
-                </div>
-                <div class="book-buttons">
-                    <button class="book-button-read">Read</button>
-                    <button class="book-button-delete">Delete</button>
-                </div>
-            </div>
-            <div class="book">
-                <div class="book-info">
-                    <h1 class="title">Intelligent Design</h1>
-                    <p class="author">by William Dembski</p>
-                    <p class="pages">Pages: 312</p>
-                </div>
-                <div class="book-buttons">
-                    <button class="book-button-read">Read</button>
-                    <button class="book-button-delete">Delete</button>
-                </div>
-            </div>
         </div>
+        <dialog id="modal-add-book">
+            <form id="modal-add-book-form">
+                <div class="modal-input">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title">
+                    <label for="author">Author</label>
+                    <input type="text" name="author" id="author">
+                    <label for="pages">Pages</label>
+                    <input type="number" name="pages" id="pages">
+                </div>
+                <div class="modal-buttons">
+                    <button id="modal-button-add">Add</button>
+                    <button id="modal-button-close">Exit</button>
+                </div>
+            </form>
+        </dialog>
     </div>
 </body>
 </html>
