@@ -104,3 +104,6 @@ body {
 }
 
 
+.input-invalid {
+    border: solid firebrick 2px;
+}

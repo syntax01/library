@@ -84,6 +84,20 @@ document.querySelector('#modal-button-close').addEventListener('click', (event) 
 document.querySelector('#modal-button-add').addEventListener('click', (event) => {
     event.preventDefault(); // This avoids the normal button "submit" functionality
 
+    let required_failed = false;
+    const required_input = document.querySelectorAll('.modal-input > input');
+    required_input.forEach(input => {
+        if(input.hasAttribute('required') && input.value.length ===0) {
+            required_failed = true;
+        }
+    })
+
+    if(required_failed) {
+        console.log('missing required input');
+        return false;
+    }
+    
+    
     title = document.querySelector('#title');
     author = document.querySelector('#author');
     pages = document.querySelector('#pages');
@@ -95,6 +109,18 @@ document.querySelector('#modal-button-add').addEventListener('click', (event) =>
     closeModal(modal_add_book);
 
 });
+
+// input validation
+document.querySelectorAll('.modal-input > input').forEach(input => {
+    if(!input.hasAttribute('required')) return;
+    input.addEventListener('blur', () => {
+        if(input.value.length === 0) {
+            input.classList.add('input-invalid');
+        } else {
+            input.classList.remove('input-invalid');
+        }
+    })
+}) 
 
 function closeModal(modal) {
     const inputs = modal.querySelectorAll('input');
